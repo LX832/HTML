@@ -10,6 +10,5 @@
 	<script>
 		location.href = 'login.jsp';
 	</script>
-Hello World!
 </body>
 </html>
