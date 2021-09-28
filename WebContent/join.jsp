@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset="UTF-8">
 <meta name="vieport" content="width=device-width", inital-scale="1">
-<lin rel="stylesheet" href="css.bootstrap.css">
+<link rel="stylesheet" href="css.bootstrap.css">
 <title>JSP 게시판 웹 사이트</title>
 </head>
 <body>
