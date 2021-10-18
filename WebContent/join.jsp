@@ -4,23 +4,23 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset="UTF-8">
-<meta name="vieport" content="width=device-width", inital-scale="1">
+<meta name="viewport" content="width=device-width", initial-scale="1">
 <link rel="stylesheet" href="css.bootstrap.css">
 <title>JSP 게시판 웹 사이트</title>
 </head>
 <body>
 	<nav class="navbar navbar-default">
 		<div class="navbor-header">
-			<button type="button" class="navbar=toggle collapsed"
+			<button type="button" class="navbar-toggle collapsed"
 				data-toggle="collapse" data-target="#bs-example-navber-collapse-1"
 				aria-expanded="false"
-				<scan class="icon-bar"></scan>
-				<scan class="icon-bar"></scan>
-				<scan class="icon-bar"></scan>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
 			</button>
 			<a class="navbar-brand" href="main.jsp">JSP 게시판 웹사이트</a>
 		</div>
-		<div class="collapse navber-collapse" id="bs=example-navbor-collapse-1">
+		<div class="collapse navbar-collapse" id="bs=example-navbor-collapse-1">
 			<ul class="nav navbar-nav">
 				<li><a href="main.jsp">메인</a></li>
 				<li><a href="bbs.jsp">r게시판</a></li>
