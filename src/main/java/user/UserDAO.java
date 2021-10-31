@@ -13,10 +13,10 @@ public class UserDAO {
 	
 	public UserDAO() {
 		try {
-			String dbURL = "jdbc:mysql://localhost:3306/BBS?serverTimezone=UTC";
-			   String dbID = "root";
-			   String dbPassword = "root";
-			   Class.forName("com.mysql.jdbc.Driver");
+			String dbURL ="jdbc:oracle:thin:@localhost:1521:xe";
+			String dbID = "bbs";
+			String dbPassword = "bbs";
+			   Class.forName("oracle.jdbc.driver.OracleDriver");
 			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);			
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -24,7 +24,7 @@ public class UserDAO {
 	}
 	
 	public int login(String userID, String userPassword) {
-		String SQL = "SELECT userPassword FROM USER WHERE userID = ?";
+		String SQL ="select userPassword from user_bbs where userID = ?";
 		try {
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, userID);
@@ -40,5 +40,22 @@ public class UserDAO {
 		e.printStackTrace();
 	}
 	return -2; //데이터베이스 오류
+	}
+
+	public int join(User user) {
+	String SQL = "INSERT INTO user_bbs VALUES (?,?,?,?,?)";
+	
+	try {
+		pstmt = conn.prepareStatement(SQL);
+		pstmt.setString(1, user.getUserID());
+		pstmt.setString(2, user.getUserPassword());
+		pstmt.setString(3, user.getUserName());
+		pstmt.setString(4, user.getUserGender());
+		pstmt.setString(5, user.getUserEmail());
+		return pstmt.executeUpdate();
+	}catch(Exception e) {
+		e.printStackTrace();
+	}
+	return -1; //데이터베이스 오류
 	}
 }
